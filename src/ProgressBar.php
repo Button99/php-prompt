@@ -3,9 +3,10 @@
 namespace Ckoumpis\PhpPrompt;
 
 class ProgressBar {
-    
-
-    public static function withSteps(int $start, int $total, int $sleep): void {
+    public static function withSteps(int $start=0, int $total = 10, int $sleep = 500): void {
+        if($total <= 0) {
+            throw new \Exception("Total steps must be greater than 0.");
+        }
         try {
             for($i = $start; $i <= $total; $i++) {
                 self::display($i, $total);
@@ -32,6 +33,5 @@ class ProgressBar {
         echo PHP_EOL . 'Error: ' . $e->getMessage() . PHP_EOL;
     }
 }
-
 
 ?>

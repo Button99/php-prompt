@@ -5,10 +5,9 @@ namespace Ckoumpis\PhpPrompt;
 class Spinner {
     private static $frames = ['-', '\\', '|', '/'];
     private static $currentFrame = 0;
-
     private static $isRunning = false;
 
-    public static function withSteps(int $start, int $steps, int $sleep): void {
+    public static function withSteps(int $start = 0, int $steps = 10, int $sleep =1 ): void {
         try {
             for($i = $start; $i < $steps; $i++) {
                 self::spin();
@@ -16,13 +15,6 @@ class Spinner {
             }    
         } catch(\Throwable $e) {
             self::handleError($e);
-        }
-    }
-
-    public static function start(string $message = '', int $delay = 5000) : void {
-        self::$isRunning = true;
-        while (self::$isRunning) {
-            self::spin($message, $delay);
         }
     }
 
