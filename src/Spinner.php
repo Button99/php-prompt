@@ -33,3 +33,4 @@ class Spinner {
         self::stop('Error: ' . $e->getMessage());
     }
 }
+?>

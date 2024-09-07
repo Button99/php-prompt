@@ -41,5 +41,4 @@ class Console {
         self::log("Cyan: " . $message, 'cyan');
     }
 }
-
 ?>

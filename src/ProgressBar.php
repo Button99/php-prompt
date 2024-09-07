@@ -33,5 +33,4 @@ class ProgressBar {
         echo PHP_EOL . 'Error: ' . $e->getMessage() . PHP_EOL;
     }
 }
-
 ?>
