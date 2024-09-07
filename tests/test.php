@@ -6,22 +6,23 @@ use Ckoumpis\PhpPrompt\Console;
 use Ckoumpis\PhpPrompt\Spinner;
 use Ckoumpis\PhpPrompt\ProgressBar;
 
-Console::log("Test");
-Console::success("Success");
-Console::warning("Warning");
-Console::error("Error");
-Console::blue('Blue');
-Console::cyan('Cyan');
+// Console::log("Test");
+// Console::success("Success");
+// Console::warning("Warning");
+// Console::error("Error");
+// Console::blue('Blue');
+// Console::cyan('Cyan');
 
 
 // User can use both.
-Spinner::withSteps(0, 10, 1);
+// Spinner::withSteps(0, 10, 1);
 
 // for($i = 0; $i < 10; $i++) {
 //     Spinner::spin("Loading...");
 //     sleep(1);
 // }
 
+// Spinner::start("Loading...");
 // Spinner::stop();
 
 
@@ -33,4 +34,4 @@ Spinner::withSteps(0, 10, 1);
 //     usleep(10000);
 // }
 
-ProgressBar::withSteps(1, 10,1);
+// ProgressBar::withSteps(1, 10,1);

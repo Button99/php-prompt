@@ -13,5 +13,7 @@
             "name": "Christos Koumpis"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    }
 }
