@@ -1,0 +1,17 @@
+{
+    "name": "ckoumpis/php-prompt",
+    "description": "A PHP console utility package providing spinners, progress bars, and error handling for better command-line user experience.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ckoumpis\\PhpPrompt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Christos Koumpis"
+        }
+    ],
+    "require": {}
+}
