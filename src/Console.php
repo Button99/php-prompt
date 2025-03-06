@@ -9,11 +9,12 @@ class Console {
         'blue' => '0;34',
         'magenta' => '0;35',
         'cyan' => '0;36',
-        'white' => '1;37'
+        'white' => '1;37',
+        'grey' => '38;5;235'
     ];
 
     public static function log(string $message, string $color = 'white'): void {
-        $colorCode = self::COLORS[$color]?? self::COLORS['white'];
+        $colorCode = self::COLORS[$color] ?? self::COLORS['white'];
         echo "\033[" . $colorCode . "m" . $message . "\033[0m" . PHP_EOL;
     }
 
@@ -28,6 +29,16 @@ class Console {
     public static function warning(string $message): void {
         self::log("Warning: " . $message, 'yellow');
     }
+
+    public static function debug(string $message): void {
+        self::log("Debug: " . $message, 'grey');
+    }
+
+    public static function notice(string $message): void
+    {
+        self::log('Notice: '. $message, 'cyan');
+    }
+
 
     public static function blue(string $message): void {
         self::log("Blue: " . $message, 'blue');

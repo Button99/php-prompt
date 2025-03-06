@@ -32,6 +32,8 @@ Console::warning("Warning");
 Console::blue("This is a blue message");
 Console::magenta("This is a magenta message");
 Console::cyan("Cyan message for notification");
+Console::debug("Debug testing");
+Console::Notice("Notice testing");
 ```
 
 #### Progress Bar
@@ -65,6 +67,17 @@ Or withSteps method
 ```php
 Spinner::withSteps(0, 10, 1);
 ```
+#### MemoryUsage
+The `MemoryUsage` class tracks Memory consumption for executed functions.
+
+Usage:
+```php
+    $start = \Ckoumpis\PhpPrompt\MemoryUsage::getMemoryUsage();
+    $arr = array_fill(0, 100000, 'test');
+    $end = \Ckoumpis\PhpPrompt\MemoryUsage::getMemoryUsage();
+    $memoryUsage = \Ckoumpis\PhpPrompt\MemoryUsage::showMemory($end - $start);
+```
+
 
 ### Contributing
 We welcome contributions! If you find a bug or have a feature request, please open an issue or submit a pull request on Github.
