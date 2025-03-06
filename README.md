@@ -22,6 +22,8 @@ List of available colors
     <li>Blue: For information messages (blue) </li>
     <li>Magenta: For important messages (magenta) </li>
     <li>Cyan: For notifications (cyan) </li>
+    <li>Debug: For debugging (grey) </li>
+    <li>Notice: For notifications (cyan) </li>
 </ul>
 
 ```php
@@ -33,7 +35,7 @@ Console::blue("This is a blue message");
 Console::magenta("This is a magenta message");
 Console::cyan("Cyan message for notification");
 Console::debug("Debug testing");
-Console::Notice("Notice testing");
+Console::notice("Notice testing");
 ```
 
 #### Progress Bar
