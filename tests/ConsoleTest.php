@@ -88,6 +88,15 @@ class ConsoleTest extends TestCase
         $output = ob_get_clean();
         echo $output;
         $this->assertStringContainsString("\033[0;36", $output);
-
     }
+
+    public function testTerm(): void {
+        ob_start();
+        Console::log('Testing log!')->term();
+        $output = ob_get_clean();
+        echo $output;
+        $this->assertStringContainsString("\033[0;36", $output);
+    }
+
+
 }
