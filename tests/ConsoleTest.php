@@ -97,6 +97,4 @@ class ConsoleTest extends TestCase
         echo $output;
         $this->assertStringContainsString("\033[0;36", $output);
     }
-
-
 }
