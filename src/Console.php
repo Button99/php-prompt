@@ -67,14 +67,5 @@ class Console {
     public function wait($seconds): void {
         sleep($seconds);
     }
-    
-    public function testSleep(): void {
-        ob_start();
-        Console::cyan('Testing notice!')->wait(2);
-        $output = ob_get_clean();
-        echo $output;
-        $this->assertStringContainsString("\033[0;36", $output);
-    }
-
 }
 ?>
