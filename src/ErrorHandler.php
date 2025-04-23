@@ -1,5 +1,7 @@
 <?php
 
+namespace Ckoumpis\PhpPrompt;
+
 class ErrorHandler {
     public static function handleError($errno, $errstr, $errfile, $errline): void {
         $errorType= [
