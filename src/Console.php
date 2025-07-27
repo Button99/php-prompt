@@ -64,7 +64,7 @@ class Console {
         die();
     }
 
-    public function wait($seconds): void {
+    public function wait(int $seconds): void {
         sleep($seconds);
     }
 }

@@ -3,11 +3,11 @@
 namespace Ckoumpis\PhpPrompt;
 
 class Spinner {
-    private static $frames = ['-', '\\', '|', '/'];
-    private static $currentFrame = 0;
-    private static $isRunning = false;
+    private static array $frames = ['-', '\\', '|', '/'];
+    private static int $currentFrame = 0;
+    private static bool $isRunning = false;
 
-    public static function withSteps(int $start = 0, int $steps = 10, int $sleep =1 ): void {
+    public static function withSteps(int $start = 0, int $steps = 10, int $sleep = 1 ): void {
         try {
             for($i = $start; $i < $steps; $i++) {
                 self::spin();

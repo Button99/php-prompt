@@ -3,7 +3,7 @@
 namespace Ckoumpis\PhpPrompt;
 
 class ErrorHandler {
-    public static function handleError($errno, $errstr, $errfile, $errline): void {
+    public static function handleError(mixed $errno, string $errstr, string $errfile, int $errline): void {
         $errorType= [
             E_ERROR => "ERROR",
             E_WARNING => "WARNING",
@@ -11,7 +11,7 @@ class ErrorHandler {
             E_NOTICE => "NOTICE",
         ];
 
-        $type = isset($errorType[$errno]) ? $errorType[$errno] : "UNKNOWN";
+        $type = $errorType[$errno] ?? "UNKNOWN";
         echo PHP_EOL . "[{$type}] {$errstr} in {$errfile} on line {$errline} ". PHP_EOL;
     }
 }
